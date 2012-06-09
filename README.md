@@ -20,7 +20,7 @@ requests are welcome, and can be submitted through GitHub.
 ## Sample Plugins
 
 * __ChildBrowser__
-  * https://github.com/alunny/pluginstall
+  * https://github.com/alunny/ChildBrowser
 * __PG-SQLite Plugin__
   * https://github.com/ApplicationCraft/PGSQLitePlugin
 
