@@ -137,7 +137,7 @@ present, and then copy the file `new-foo.js` as `foo.js` into that directory.
 If a file exists at the target location, tools based on this specification
 should stop the installation process and notify the user of the conflict.
 
-### &lt;platform&lt;
+### &lt;platform&gt;
 
 Platform tags identify platforms that have associated native code. Tools using
 this specification can identify supported platforms and install the code into
@@ -254,7 +254,7 @@ Examples:
 This is probably an implementation detail leaking through, and future versions
 of this document will likely merge these elements with `source-file`.
 
-### &lt;framework&lt;
+### &lt;framework&gt;
 
 Identifies a framework (usually part of the OS/platform) that the plugin depends
 on. Example:
