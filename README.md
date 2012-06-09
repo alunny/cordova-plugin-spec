@@ -240,7 +240,7 @@ iOS Cordova project. Example:
 This may be an implementation detail leaking through, and could be merged with
 the `config-file` element at some later point.
 
-### &lt;resource-file&gt; and lt;header-file&gt;
+### &lt;resource-file&gt; and &lt;header-file&gt;
 
 Like source files, but specifically for platforms that distinguish between
 source files, headers, and resources (iOS)
