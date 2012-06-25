@@ -1,6 +1,6 @@
 # Cordova Plugin Specification
 
-Last edited June 8, 2012
+Last edited June 25, 2012
 
 ## About this document
 
@@ -92,7 +92,21 @@ style regular expression:
 
 ### Child elements
 
-All child elements of the &lt;plugin&gt; element are optional.
+### &lt;engines&gt; element
+
+The child elements of the `<engines>` element specify versions of
+Apache Cordova-based frameworks that this plugin supports. An example:
+
+    <engines>
+        <cordova version="1.7.0" />
+        <cordova version="1.8.1" />
+    </engines>
+
+Similarly to the `version` attribute for the `<plugin>` element,
+the version string specified should matcha a major-minor-patch string
+conforming to the regular expression:
+
+    ^\d+[.]\d+[.]\d+$
 
 ### &lt;name&gt; element
 
