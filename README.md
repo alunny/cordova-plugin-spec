@@ -98,8 +98,9 @@ The child elements of the `<engines>` element specify versions of
 Apache Cordova-based frameworks that this plugin supports. An example:
 
     <engines>
-        <cordova version="1.7.0" />
-        <cordova version="1.8.1" />
+        <engine name="cordova" version="1.7.0" />
+        <engine name="cordova" version="1.8.1" />
+        <engine name="worklight" version="1.0.0" />
     </engines>
 
 Similarly to the `version` attribute for the `<plugin>` element,
@@ -107,6 +108,18 @@ the version string specified should matcha a major-minor-patch string
 conforming to the regular expression:
 
     ^\d+[.]\d+[.]\d+$
+
+Engine elements may also have fuzzy matches to avoid repetition, and reduce
+maintenance when the underlying platform is updated. A minimum of `>`, `>=`,
+`<` and `<=` should be supported by tools, such as:
+
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova" version="<1.8.1" />
+    </engines>
+
+Tools may abort plugin installation if the target project does not meet the
+engine constraints.
 
 ### &lt;name&gt; element
 
