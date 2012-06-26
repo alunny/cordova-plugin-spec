@@ -295,6 +295,11 @@ platform.
 ## Authors
 
 Andrew Lunny
+Fil Maj
+
+## Contributors
+
+Michael Brooks
 
 ## License
 
