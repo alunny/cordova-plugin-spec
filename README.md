@@ -1,6 +1,6 @@
 # Cordova Plugin Specification
 
-Last edited June 25, 2012
+Last edited August 16, 2012
 
 ## About this document
 
@@ -291,6 +291,37 @@ on. Example:
 Tools should identify the framework through the `src` attribute and attempt to
 add the framework to the Cordova project, in the correct fashion for a given
 platform.
+
+## Variables
+
+In certain cases, a plugin may need to make configuration changes dependent on
+the target application. For example, to register for C2DM on Android, an app
+with package id `com.alunny.message` would need a permission like:
+
+    <uses-permission
+    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+
+In cases like this (where the content inserted from the `plugin.xml` file is
+not known ahead of time), variables can be indicated by a dollar-sign and a
+series of capital letters, digits and underscores. For the above example, the
+`plugin.xml` file would include this tag:
+
+    <uses-permission
+    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+
+Tools using this specification should replace variable references with the
+correct value, if specified, or the empty string otherwise. The value of the
+variable reference may be detected (in this case, from the `AndroidManifest.xml`
+file, or specified by the user of the tool; the exact process is dependent on
+the particular tool.
+
+Certain variable names should be reserved - these are listed below.
+
+### $PACKAGE_NAME
+
+The reverse-domain style unique identifier for the package - corresponding to
+the `CFBundleIdentifier` on iOS or the `package` attribute of the top-level
+`manifest` element in an `AndroidManifest.xml` file.
 
 ## Authors
 
