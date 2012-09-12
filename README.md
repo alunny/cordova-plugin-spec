@@ -310,10 +310,16 @@ series of capital letters, digits and underscores. For the above example, the
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
 
 Tools using this specification should replace variable references with the
-correct value, if specified, or the empty string otherwise. The value of the
-variable reference may be detected (in this case, from the `AndroidManifest.xml`
-file, or specified by the user of the tool; the exact process is dependent on
-the particular tool.
+correct value, if specified, or the empty string otherwise.
+
+The value of the variable reference may be detected by the plugin installation
+tool (in this case, by reading the `AndroidManifest.xml` file), or specified
+by the end-user. One approach could be using environment variables:
+
+    $ pluginstall android . ~/my-plugin PACKAGE_NAME=com.foo
+
+Variable resolution could also be specified programmatically, depending how the
+plugin installer is called.
 
 Certain variable names should be reserved - these are listed below.
 
@@ -331,6 +337,7 @@ Fil Maj
 ## Contributors
 
 Michael Brooks
+Mike Reinstein
 
 ## License
 
