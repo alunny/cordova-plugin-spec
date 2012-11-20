@@ -308,6 +308,11 @@ series of capital letters, digits and underscores. For the above example, the
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    
+It may also be necessary to copy a file into the folder containing the main activity.
+This path may not be known in advance. In this case you would do something like:
+
+ 	<source-file src="src/android/package/GCMIntentService.java" target-dir="$PACKAGE_PATH" />
 
 Tools using this specification should replace variable references with the
 correct value, if specified, or the empty string otherwise.
@@ -328,6 +333,12 @@ Certain variable names should be reserved - these are listed below.
 The reverse-domain style unique identifier for the package - corresponding to
 the `CFBundleIdentifier` on iOS or the `package` attribute of the top-level
 `manifest` element in an `AndroidManifest.xml` file.
+
+### $PACKAGE_PATH
+
+A path to the folder containing the main activity of a target project.
+For example, for an app with a package id of com.alunny.message, $PACKAGE_PATH
+would evaluate to /src/com/alunny/message
 
 ## Authors
 
