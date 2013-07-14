@@ -132,6 +132,12 @@ At this point in time, the tools prototyped for this format do not make use of
 this element. If this document progresses, localization will also need to be
 accounted for.
 
+### &lt;license&gt; element
+
+This element contains the name of the license used by the plugin.  A sample:
+
+    <license>Apache 2.0</license>
+
 ### &lt;asset&gt; element
 
 One or more elements listing the files or directories to be copied into a
