@@ -62,7 +62,7 @@ plugin.
 
 A sample plugin element:
 
-    <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.alunny.foo"
         version="1.0.2">
@@ -74,7 +74,7 @@ following attributes:
 
 #### xmlns (required)
 
-The plugin namespace - `http://www.phonegap.com/ns/plugins/1.0`. If the document
+The plugin namespace - `http://apache.org/cordova/ns/plugins/1.0`. If the document
 contains XML from other namespaces - for example, tags to be added ot the
 AndroidManifest.xml file - those namespaces should also be included in the
 top-level element.
